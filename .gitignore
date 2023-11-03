@@ -1,0 +1,5 @@
+/minio_data
+/postgres-data
+/.next
+/server/node_modules
+/client/node_modules
