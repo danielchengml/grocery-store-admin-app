@@ -60,3 +60,7 @@ img {
   justify-content: flex-end;
   font-size: 25px;
 }
+
+#product-photo {
+  max-height: 50px
+}

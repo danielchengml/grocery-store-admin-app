@@ -12,6 +12,10 @@ export const Form = ({ onSubmit }) => {
         <input className="form-control" id="description" />
       </div>
       <div className="form-group">
+        <label htmlFor="image_url">Image URL</label>
+        <input className="form-control" id="image_url" />
+      </div>
+      <div className="form-group">
         <label htmlFor="price">Price</label>
         <input className="form-control" id="price" />
       </div>

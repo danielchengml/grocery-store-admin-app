@@ -10,6 +10,10 @@ const nextConfig = {
           destination: "http://grocery-store-server:4000/api/v1/product",
         },
         {
+          source: "/api/product/delete/",
+          destination: "http://grocery-store-server:4000/api/v1/product/5",
+        },
+        {
           source: "/api/image/getPresignedUrl",
           destination: "http://grocery-store-server:4000/api/v1/presignedUrl",
         },

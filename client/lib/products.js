@@ -5,15 +5,19 @@ import matter from 'gray-matter';
 const productsDirectory = path.join(process.cwd(), 'products');
 
 export async function getSortedProductsData() {
-  let res = await fetch('http://grocery-store-server:4000/api/v1/products');
-  let allProductsData = await res.json()
-  return allProductsData.sort((a, b) => {
-    if (a.name < b.name) {
-      return 1;
-    } else {
-      return -1;
-    }
-  });
+  try {
+    let res = await fetch('http://grocery-store-server:4000/api/v1/products');
+    let allProductsData = await res.json()
+    return allProductsData.sort((a, b) => {
+      if (a.name < b.name) {
+        return 1;
+      } else {
+        return -1;
+      }
+    });
+  } catch (err) {
+    return [];
+  }
 }
 
 export async function getAllProductIds() {
@@ -55,6 +59,20 @@ export async function addProduct(payload) {
 
 }
 
+export async function removeProduct(id) {
+  const settings = {
+      method: 'DELETE'
+  };
+  try {
+      let fetchResponse = await fetch('http://grocery-store-server:4000/api/v1/product/5', settings);
+      let product = await fetchResponse.json();
+      return product
+  } catch (e) {
+      return e;
+  }  
+
+}
+
 export async function getPresignedUrl() {
   try {
       let res = await fetch('/api/image/getPresignedUrl');
@@ -76,11 +94,8 @@ export async function uploadToBucket(url, file) {
       },
       body: file
     };
-    console.log("this.url!!!", url)
-    console.log("this.settings!!!", settings)
     let res = await fetch(url, settings);
     let data = await res.json();
-    console.log("this.data!!!", data)
     return data
   } catch (e) {
       return e;

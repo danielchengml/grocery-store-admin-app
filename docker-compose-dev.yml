@@ -1,20 +1,5 @@
 version: '3'
 services:
-  server:
-    container_name: grocery-store-server
-    hostname: grocery-store-server
-    domainname: grocery-store-server
-    restart: always
-    build: ./server/
-    command: bash -c "yarn global add knex; sh build/init_db.sh; yarn global add babel-cli -S; yarn; yarn start"
-    env_file: ./server/.env
-    volumes:
-      - .:/app:cached
-    ports:
-      - "4000:4000"
-    networks: 
-      - grocery-store-network
-
   client:
     build: ./client/
     container_name: grocery-store-fe
@@ -29,18 +14,6 @@ services:
       - /app/.next
     networks: 
       - grocery-store-network
-
-  # nginx:
-  #   restart: always
-  #   build:
-  #     context: .
-  #     dockerfile: Dockerfile.nginx
-  #   container_name: mini-waffles-nginx
-  #   ports:
-  #     - 80:9090
-  #     - 443:9090
-  #   networks: 
-  #     - grocery-store-network
 
   redis:
     image: redis:latest
@@ -90,6 +63,21 @@ services:
       - MINIO_ROOT_USER=grocery_store
       - MINIO_ROOT_PASSWORD=grocery-store-123
       - MINIO_DEFAULT_BUCKETS=grocery-store-bucket
+
+  server:
+    container_name: grocery-store-server
+    hostname: grocery-store-server
+    domainname: grocery-store-server
+    restart: always
+    build: ./server/
+    command: bash -c "yarn global add knex; sh build/init_db.sh; yarn global add babel-cli -S; yarn; yarn start"
+    env_file: ./server/.env
+    volumes:
+      - .:/app:cached
+    ports:
+      - "4000:4000"
+    networks: 
+      - grocery-store-network
 
 networks:
   grocery-store-network:

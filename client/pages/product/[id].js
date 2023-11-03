@@ -8,7 +8,7 @@ export default function Post({ productData }) {
             <br />
             description: {productData.description}
             <br />
-            image: {productData.image_url}
+            <img src={productData.image_url}/>
             <br />
             price: {productData.price}
         </Layout>

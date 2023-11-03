@@ -3,29 +3,10 @@ import React, { useState } from "react";
 const UploadAndDisplayImage = () => {
   const [selectedImage, setSelectedImage] = useState(null);
 
+  // not working
   const uploadImage = async () => {
-    // get presignedUrl
-    console.log("selectedImage", selectedImage)
-    // const settings = {
-    //   method: 'PUT',
-    //   headers: {
-    //     'headers': {
-    //       'Content-Type': 'image/png'
-    //     },
-    //     formData: {
-    //       '': {
-    //         'value': readFileSync.createReadStream('/Users/dlean/Desktop/screenshots/Screen Shot 2023-10-11 at 9.39.07 AM.png'),
-    //         'options': {
-    //           'filename': 'Screen Shot 2023-10-11 at 9.39.07 AM.png',
-    //           'contentType': null
-    //         }
-    //       }
-    //     }
-    //   }
-    // };
     const formData = new FormData();
     formData.append('image', selectedImage);
-    console.log("formData", formData)
     // const res = await fetch('/api/image/upload', {
     //   method: 'PUT',
     //   formData: formData

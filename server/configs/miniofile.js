@@ -1,8 +1,8 @@
 module.exports = {
-    endPoint: 'grocery-store-bucket',
+    endPoint: process.env.MINIO_HOST,
     port: 9000,
     useSSL: false,
-    accessKey: 'qHYqPW8QPMZBcYCc',
-    secretKey: 'yoYMjJYF8FupcRz1lY5mfxrqajKquLBH',
+    accessKey: process.env.MINIO_ACCESS_KEY,
+    secretKey: process.env.MINIO_SECRET_KEY,
   };
   

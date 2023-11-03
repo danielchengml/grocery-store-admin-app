@@ -1,0 +1,32 @@
+[
+    {
+      "name": "Carrots - sm",
+      "description": "Carrots Small",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/a/a6/Carrots_..jpg",
+      "price": 5.00
+    },
+    {
+      "name": "Carrots - md",
+      "description": "Carrots Medium",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/a/a6/Carrots_..jpg",
+      "price": 6.00
+    },
+    {
+      "name": "Carrots - lg",
+      "description": "Carrots Large",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/a/a6/Carrots_..jpg",
+      "price": 15.00
+    },
+    {
+      "name": "Pork - Australian",
+      "description": "Pork (Australia)",
+      "image_url": "https://e7.pngegg.com/pngimages/402/71/png-clipart-domestic-pig-pork-belly-meat-food-meat-beef-roast-beef-thumbnail.png",
+      "price": 25.00
+    },
+    {
+      "name": "Pork - Malaysia",
+      "description": "Pork (Malaysia)",
+      "image_url": "https://e7.pngegg.com/pngimages/402/71/png-clipart-domestic-pig-pork-belly-meat-food-meat-beef-roast-beef-thumbnail.png",
+      "price": 15.00
+    }
+  ]
