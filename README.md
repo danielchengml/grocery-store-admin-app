@@ -79,10 +79,10 @@ Consists of the following (dockerized) applications:
     ```
 1. The applications should run successfully with 5 products created. They should look like that when running `docker ps`
     ```
-    CONTAINER ID   IMAGE                            COMMAND                  CREATED              STATUS              PORTS                              NAMES
-036e020b8e07   postgres:10.5                    "docker-entrypoint.s…"   About a minute ago   Up About a minute   0.0.0.0:5432->5432/tcp             grocery-store-db
-eb6eba1985aa   grocery-store-admin-app-client   "docker-entrypoint.s…"   About a minute ago   Up About a minute   0.0.0.0:3000->3000/tcp             grocery-store-fe
-266bbc86455d   grocery-store-admin-app-server   "docker-entrypoint.s…"   About a minute ago   Up About a minute   0.0.0.0:4000->4000/tcp             grocery-store-server
-efd662309fee   bitnami/minio:2022               "/opt/bitnami/script…"   About a minute ago   Up About a minute   0.0.0.0:9000-9001->9000-9001/tcp   grocery-store-bucket
-d757e6f663da   redis:latest                     "docker-entrypoint.s…"   About a minute ago   Up About a minute   0.0.0.0:6379->6379/tcp             grocery-store-cache
+    IMAGE                             PORTS                             NAMES
+    postgres:10.5                    0.0.0.0:5432->5432/tcp             grocery-store-db
+    grocery-store-admin-app-client   0.0.0.0:3000->3000/tcp             grocery-store-fe
+    grocery-store-admin-app-server   0.0.0.0:4000->4000/tcp             grocery-store-server
+    bitnami/minio:2022               0.0.0.0:9000-9001->9000-9001/tcp   grocery-store-bucket
+    redis:latest                     0.0.0.0:6379->6379/tcp             grocery-store-cache
     ```
