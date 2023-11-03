@@ -39,25 +39,25 @@ Dockerized Next.js application with the ability to talk to the server/ backend
 ## Backend
 
 Consists of the following (dockerized) applications:
-    * node/express server
-        - has the following endpoints:
-            1. list products (`GET http://localhost:4000/api/v1/products`)
-            2. get product by Id (`GET http://localhost:4000/api/v1/product/{id}`)
-            3. add product (`POST http://localhost:4000/api/v1/product`)
-                ```
-                body: 
-                    {
-                        "name" : "product y22",
-                        "description" : "test desc",
-                        "image_url": "https://www.test.com",
-                        "price" : 15.00
-                    }
-                ```
-            4. update product (`PUT http://localhost:4000/api/v1/product/{id}`)
-            5. delete product (`DELETE http://localhost:4000/api/v1/product/{id}`)
-    * postgres SQL (dockerized instance)
-    * minio (dockerized instance)
-    * redis (dockerized instance) - not used with server yet
+* node/express server
+    - has the following endpoints:
+        1. list products (`GET http://localhost:4000/api/v1/products`)
+        2. get product by Id (`GET http://localhost:4000/api/v1/product/{id}`)
+        3. add product (`POST http://localhost:4000/api/v1/product`)
+            ```
+            body: 
+                {
+                    "name" : "product y22",
+                    "description" : "test desc",
+                    "image_url": "https://www.test.com",
+                    "price" : 15.00
+                }
+            ```
+        4. update product (`PUT http://localhost:4000/api/v1/product/{id}`)
+        5. delete product (`DELETE http://localhost:4000/api/v1/product/{id}`)
+* postgres SQL (dockerized instance)
+* minio (dockerized instance)
+* redis (dockerized instance) - not used with server yet
 
 ## How to setup Dev Environment
 
