@@ -43,7 +43,8 @@ services:
     ports:
       - '5432:5432'
     volumes: 
-      - ./postgres-data:/var/lib/postgresql/data
+      - ./server/postgres-data:/var/lib/postgresql/data
+      - ./server/build/create_database.sql:/docker-entrypoint-initdb.d/create_database.sql
     networks: 
       - grocery-store-network
 

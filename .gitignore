@@ -1,5 +1,7 @@
 /minio_data
-/postgres-data
+/server/postgres-data
 /.next
 /server/node_modules
 /client/node_modules
+/server/yarn-error.log
+/client/yarn-error.log
