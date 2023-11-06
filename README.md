@@ -25,16 +25,7 @@
 
 ## Frontend
 
-Dockerized Next.js application with the ability to talk to the server/ backend
-
-    $ref: 
-
-    cmd:
-    ```
-    cd frontend/
-    docker build -t grocery_store_fe -f Dockerfile.nextjs .
-    docker run --publish 3000:3000 grocery_store_fe
-    ```
+Consists of a dockerized NextJS application. To run the nextjs application, please refer to the instructions in [How to setup Dev Environment]. The frontend will be ran together with the backend.
 
 ## Backend
 
