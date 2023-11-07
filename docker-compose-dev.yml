@@ -27,7 +27,7 @@ services:
       - grocery-store-network
 
   postgres:
-    image: postgres:10.5
+    image: postgres:16.0
     container_name: grocery-store-db
     hostname: grocery-store-db
     domainname: grocery-store-db
@@ -44,7 +44,7 @@ services:
       - '5432:5432'
     volumes: 
       - ./server/postgres-data:/var/lib/postgresql/data
-      - ./server/build/create_database.sql:/docker-entrypoint-initdb.d/create_database.sql
+      # - ./server/build/create_database.sql:/docker-entrypoint-initdb.d/create_database.sql
     networks: 
       - grocery-store-network
 

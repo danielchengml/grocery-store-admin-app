@@ -77,3 +77,11 @@ Consists of the following (dockerized) applications:
     bitnami/minio:2022               0.0.0.0:9000-9001->9000-9001/tcp   grocery-store-bucket
     redis:latest                     0.0.0.0:6379->6379/tcp             grocery-store-cache
     ```
+
+# Troubleshooting
+
+* If the application fails to insert products / create the database, it might be due to the server trying run the migration files before the database is done initializing. In that case, we can manually ssh into the server and run the migration files manually. 
+```
+$ docker exec -it grocery-store-server bash
+$ sh ./build/init_db.sh
+```
